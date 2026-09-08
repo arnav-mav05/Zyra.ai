@@ -49,3 +49,57 @@ Just describe your idea and let Zyra do the heavy lifting.
 🎨 Customize & refine
         ↓
 🚀 Deploy
+
+                         ┌─────────────────┐
+                         │      USER       │
+                         │       💻        │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │  React Client   │
+                         │      ⚛️         │
+                         └────────┬────────┘
+                                  │
+                              REST API
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │ Express Server  │
+                         │      🟢         │
+                         └────────┬────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+        ┌───────────┐       ┌───────────┐       ┌───────────┐
+        │  MongoDB  │       │  Firebase │       │   Stripe  │
+        │    🍃     │       │    🔥     │       │    💳     │
+        └───────────┘       └───────────┘       └───────────┘
+                                  │
+                                  ▼
+                           ┌──────────────┐
+                           │   AI Engine  │
+                           │      🤖      │
+                           └──────────────┘
+
+                           Zyra/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── index.js
+│   ├── package.json
+│   └── .env.example
+│
+├── .gitignore
+└── README.md
+
