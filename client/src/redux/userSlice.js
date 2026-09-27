@@ -1,7 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
-import userSlice from "./userSlice";
-export const store = configureStore({
-  reducer: {
-    user: userSlice,
-  },
-});
+import { createSlice } from "@reduxjs/toolkit";
+
+const userSlice= createSlice({
+    name: "user",
+    initialState:{
+        userData:null
+    },
+    reducer:{
+        setUserData:(state,action)=>{
+            state.userData = action.payload
+        }
+    }
+})
+
+export const {setUserData}=userSlice.actions
+export default userSlice.reducer
